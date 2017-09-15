@@ -1,4 +1,5 @@
-package com.chubrickdm;
+package com.mycompany;
+
 import chubrickdm.*;
 import javafx.application.*;
 import javafx.scene.*;
@@ -6,7 +7,14 @@ import javafx.stage.*;
 import javafx.scene.layout.*;
 
 
-public class Main extends Application{
+public class Main{
+	public static void main (String[] args){
+		Graph g = new Graph ();
+		g.input ();
+		g.output ();
+	}
+}
+/*public class Main extends Application{
 	public static void main (String [] args){
 		System.out.println ("Launch javaFX program.");
 		launch (args);
@@ -30,4 +38,4 @@ public class Main extends Application{
 	public void stop (){
 		System.out.println ("Stop program.");
 	}
-}
+}*/

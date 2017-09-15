@@ -1,10 +1,6 @@
 package chubrickdm;
 
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.InputMismatchException;
-import java.io.*;
-import java.util.StringTokenizer;
 
 public class Graph{
 	boolean isWeightedGraph = false;
@@ -41,11 +37,11 @@ public class Graph{
 	}
 	
 	public void output (){
-	
+		OutputGraph output = new OutputGraph (this);
 	}
 	
 	public void info (){
-		System.out.println ("Information about your graph:");
+		System.out.println ("---------Information about your graph---------");
 		System.out.println ("Is orgraph - " + isOrgraph + ".");
 		System.out.println ("Is weighted graph - " + isWeightedGraph + ".");
 		if (!graphOnList){
@@ -54,8 +50,11 @@ public class Graph{
 		else{
 			System.out.println ("Storage method - list.");
 		}
-		System.out.println ("Exist edge value - " + existEdgeValue + ".");
+		if (!isWeightedGraph){
+			System.out.println ("Exist edge value - " + existEdgeValue + ".");
+		}
 		System.out.println ("No edge value - " + noEdgeValue + ".");
 		System.out.println ("Number of vertices - " + numVertex + ".");
+		System.out.println ("----------------------------------------------");
 	}
 }
