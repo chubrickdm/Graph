@@ -1,10 +1,6 @@
 package com.mycompany;
 
-import chubrickdm.*;
-import javafx.application.*;
-import javafx.scene.*;
-import javafx.stage.*;
-import javafx.scene.layout.*;
+import com.chubrickdm.Graph;
 
 
 public class Main{

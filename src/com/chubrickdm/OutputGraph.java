@@ -1,4 +1,4 @@
-package chubrickdm;
+package com.chubrickdm;
 
 import java.util.Scanner;
 import java.util.ArrayList;
