@@ -1,16 +1,16 @@
-package com.chubrickdm;
+package com.chubrickdm.Graph;
 
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 class OutputGraph{
 	private Graph graph;
 	private Scanner scanner = new Scanner (System.in);
 	
 	private void consoleMatrixOutput (){
-		for (int [] tmpArray : graph.matrix){
-			for (int tmpInt : tmpArray){
-				System.out.print (tmpInt + " ");
+		for (int i = 1; i < graph.numVertex + 1; i++){
+			for (int j = 1; j < graph.numVertex + 1; j++){
+				System.out.print ("\t" + graph.matrix [i][j] + " ");
 			}
 			System.out.println ();
 		}
@@ -21,7 +21,7 @@ class OutputGraph{
 			int i = 0;
 			for (ArrayList <Graph.Edge> tmpList : graph.list){
 				for (Graph.Edge tmpEdge : tmpList){
-					System.out.println ((i) + " " + tmpEdge.index + " " + tmpEdge.weight);
+					System.out.println ("\t" + (i) + " \t" + tmpEdge.index + " \t" + tmpEdge.weight);
 				}
 				i++;
 			}
@@ -30,7 +30,7 @@ class OutputGraph{
 			int i = 0;
 			for (ArrayList <Graph.Edge> tmpList : graph.list){
 				for (Graph.Edge tmpEdge : tmpList){
-					System.out.println ((i) + " " + tmpEdge.index);
+					System.out.println ("\t" + (i) + " \t" + tmpEdge.index);
 				}
 				i++;
 			}

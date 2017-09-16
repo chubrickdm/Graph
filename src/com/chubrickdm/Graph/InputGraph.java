@@ -1,4 +1,4 @@
-package com.chubrickdm;
+package com.chubrickdm.Graph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -38,19 +38,19 @@ class InputGraph{
 	}
 	
 	private void keyInputGraphOnMatrix (){
-		graph.matrix = new int[graph.numVertex][graph.numVertex];
+		graph.matrix = new int[graph.numVertex + 1][graph.numVertex + 1];
 		System.out.println ("Enter the vertex incidence matrix:");
-		for (int i = 0; i < graph.numVertex; i++){
-			for (int j = 0; j < graph.numVertex; j++){
+		for (int i = 1; i < graph.numVertex + 1; i++){
+			for (int j = 1; j < graph.numVertex + 1; j++){
 				graph.matrix[i][j] = scanner.nextInt ();
 			}
 		}
+		
+		createListBasedOnMatrix ();
 	}
 	
 	private void keyInputGraphOnList (){
-		for (int i = 0; i <= graph.numVertex; i++){
-			graph.list.add (new ArrayList <Graph.Edge> ());
-		}
+		initializeList ();
 		
 		try{
 			System.out.println ("Enter the list incidence matrix: ");
@@ -90,6 +90,8 @@ class InputGraph{
 		catch (IOException e){
 			System.out.println ("ERROR reading from the keyboard!");
 		}
+		
+		createMatrixBasedOnList ();
 	}
 	
 	private void keyInputWeightedOrgraphOnList (int firstV, int secondV, StringTokenizer tokens){
@@ -166,11 +168,11 @@ class InputGraph{
 			String line = br.readLine ();
 			StringTokenizer tokens = new StringTokenizer (line);
 			graph.numVertex = Integer.parseInt (tokens.nextToken ());
-			graph.matrix = new int[graph.numVertex][graph.numVertex];
-			for (int i = 0; i < graph.numVertex; i++){
+			graph.matrix = new int[graph.numVertex + 1][graph.numVertex + 1];
+			for (int i = 1; i < graph.numVertex + 1; i++){
 				line = br.readLine ();
 				tokens = new StringTokenizer (line);
-				for (int j = 0; j < graph.numVertex; j++){
+				for (int j = 1; j < graph.numVertex + 1; j++){
 					graph.matrix[i][j] = Integer.parseInt (tokens.nextToken ());
 				}
 			}
@@ -178,6 +180,8 @@ class InputGraph{
 		catch (IOException e){
 			System.out.println ("ERROR! Input error.");
 		}
+		
+		createListBasedOnMatrix ();
 	}
 	
 	private void fileInputGraphOnList (){
@@ -189,9 +193,7 @@ class InputGraph{
 			line = br.readLine ();
 			StringTokenizer tokens = new StringTokenizer (line);
 			graph.numVertex = Integer.parseInt (tokens.nextToken ());
-			for (int i = 0; i <= graph.numVertex; i++){
-				graph.list.add (new ArrayList <Graph.Edge> ());
-			}
+			initializeList ();
 			while (!finishInput){
 				line = br.readLine ();
 				if (line == null || line.length () == 0){
@@ -222,6 +224,8 @@ class InputGraph{
 		catch (IOException e){
 			System.out.println ("ERROR! Input error.");
 		}
+		
+		createMatrixBasedOnList ();
 	}
 	
 	private void fileInputWeightedOrgraphOnList (int firstV, int secondV, StringTokenizer tokens){
@@ -271,6 +275,44 @@ class InputGraph{
 	}
 	
 	///////////////////////////////////////////////////////
+	
+	private void createListBasedOnMatrix (){
+		initializeList ();
+		
+		Graph.Edge tmpE;
+		for (int i = 1; i < graph.numVertex + 1; i++){
+			for (int j = 1; j < graph.numVertex + 1; j++){
+				if (graph.matrix[i][j] != graph.noEdgeValue){
+					tmpE = new Graph.Edge ();
+					tmpE.index = j;
+					tmpE.weight = graph.matrix[i][j];
+					graph.list.get (i).add (tmpE);
+				}
+			}
+		}
+	}
+	
+	private void createMatrixBasedOnList (){
+		graph.matrix = new int[graph.numVertex + 1][graph.numVertex + 1];
+		
+		for (int i = 1; i < graph.numVertex + 1; i++){
+			for (int j = 1; j < graph.numVertex + 1; j++){
+				graph.matrix [i][j] = graph.noEdgeValue;
+			}
+			
+			
+				for (Graph.Edge tmpE : graph.list.get (i)){
+					graph.matrix[i][tmpE.index] = tmpE.weight;
+				}
+			
+		}
+	}
+	
+	private void initializeList (){
+		for (int i = 0; i <= graph.numVertex; i++){
+			graph.list.add (new ArrayList <Graph.Edge> ());
+		}
+	}
 	
 	private void selectStorageMethod (){
 		String inputMethod;

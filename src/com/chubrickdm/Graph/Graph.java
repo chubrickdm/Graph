@@ -1,4 +1,4 @@
-package com.chubrickdm;
+package com.chubrickdm.Graph;
 
 import java.util.ArrayList;
 

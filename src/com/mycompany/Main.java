@@ -1,6 +1,6 @@
 package com.mycompany;
 
-import com.chubrickdm.Graph;
+import com.chubrickdm.Graph.Graph;
 import java.util.Scanner;
 
 public class Main{
