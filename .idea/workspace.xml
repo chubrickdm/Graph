@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35d4a1e0-84c5-443a-a3da-5a030cf19ef5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Graph/chubrickdm/Graph$Edge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Graph/chubrickdm/Graph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Graph/chubrickdm/InputGraph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Graph/chubrickdm/OutputGraph.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Graph/com/mycompany/Main.class" afterPath="$PROJECT_DIR$/out/production/Graph/com/mycompany/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chubrickdm/Graph.java" afterPath="$PROJECT_DIR$/src/com/chubrickdm/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chubrickdm/InputGraph.java" afterPath="$PROJECT_DIR$/src/com/chubrickdm/InputGraph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mycompany/Main.java" afterPath="$PROJECT_DIR$/src/com/mycompany/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chubrickdm/Graph.java" afterPath="$PROJECT_DIR$/src/com/chubrickdm/Graph.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chubrickdm/InputGraph.java" afterPath="$PROJECT_DIR$/src/com/chubrickdm/InputGraph.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/chubrickdm/OutputGraph.java" afterPath="$PROJECT_DIR$/src/com/chubrickdm/OutputGraph.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,9 +25,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#Main#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,13 +38,13 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chubrickdm/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="222">
+              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="class#Edge#0;class#Graph#0" expanded="false" />
                 <element signature="method#Graph#0;class#Graph#0" expanded="false" />
                 <element signature="method#Graph#1;class#Graph#0" expanded="false" />
-                <element signature="e#1014#1015#0" expanded="true" />
+                <element signature="method#input#0;class#Graph#0" expanded="false" />
                 <element signature="method#info#0;class#Graph#0" expanded="false" />
               </folding>
             </state>
@@ -58,12 +54,15 @@
       <file leaf-file-name="OutputGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chubrickdm/OutputGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="38" column="4" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#consoleMatrixOutput#0;class#OutputGraph#0" expanded="false" />
+                <element signature="method#consoleListOutput#0;class#OutputGraph#0" expanded="false" />
                 <element signature="method#consoleOutput#0;class#OutputGraph#0" expanded="false" />
                 <element signature="method#windowOutput#0;class#OutputGraph#0" expanded="false" />
+                <element signature="method#OutputGraph#0;class#OutputGraph#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -72,10 +71,9 @@
       <file leaf-file-name="InputGraph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/chubrickdm/InputGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="295" column="4" lean-forward="true" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
+            <state relative-caret-position="102">
+              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#keyInput#0;class#InputGraph#0" expanded="false" />
                 <element signature="method#keyInputGraphOnMatrix#0;class#InputGraph#0" expanded="false" />
                 <element signature="method#keyInputGraphOnList#0;class#InputGraph#0" expanded="false" />
@@ -143,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/chubrickdm/InputGraph.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/com/mycompany/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/chubrickdm/Graph.java" />
         <option value="$PROJECT_DIR$/src/com/chubrickdm/InputGraph.java" />
       </list>
     </option>
@@ -304,6 +303,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Graph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chubrickdm" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -454,7 +460,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -474,7 +480,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -483,7 +489,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -495,7 +504,7 @@
             <element signature="class#Edge#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#1;class#Graph#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#info#0;class#Graph#0" expanded="false" />
           </folding>
         </state>
@@ -506,7 +515,6 @@
         <state relative-caret-position="323">
           <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#keyInput#0;class#InputGraph#0" expanded="false" />
             <element signature="method#keyInputGraphOnMatrix#0;class#InputGraph#0" expanded="false" />
             <element signature="method#keyInputGraphOnList#0;class#InputGraph#0" expanded="false" />
@@ -534,8 +542,11 @@
           <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#consoleMatrixOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#consoleListOutput#0;class#OutputGraph#0" expanded="false" />
             <element signature="method#consoleOutput#0;class#OutputGraph#0" expanded="false" />
             <element signature="method#windowOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#OutputGraph#0;class#OutputGraph#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -544,7 +555,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,7 +570,7 @@
             <element signature="class#Edge#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#1;class#Graph#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#info#0;class#Graph#0" expanded="false" />
           </folding>
         </state>
@@ -568,8 +582,11 @@
           <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#consoleMatrixOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#consoleListOutput#0;class#OutputGraph#0" expanded="false" />
             <element signature="method#consoleOutput#0;class#OutputGraph#0" expanded="false" />
             <element signature="method#windowOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#OutputGraph#0;class#OutputGraph#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -579,7 +596,6 @@
         <state relative-caret-position="782">
           <caret line="170" column="20" lean-forward="true" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#keyInput#0;class#InputGraph#0" expanded="false" />
             <element signature="method#keyInputGraphOnMatrix#0;class#InputGraph#0" expanded="false" />
             <element signature="method#keyInputGraphOnList#0;class#InputGraph#0" expanded="false" />
@@ -605,7 +621,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -617,7 +636,7 @@
             <element signature="class#Edge#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#1;class#Graph#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#info#0;class#Graph#0" expanded="false" />
           </folding>
         </state>
@@ -627,7 +646,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -639,7 +661,7 @@
             <element signature="class#Edge#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#1;class#Graph#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#info#0;class#Graph#0" expanded="false" />
           </folding>
         </state>
@@ -660,18 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chubrickdm/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#consoleOutput#0;class#OutputGraph#0" expanded="false" />
-            <element signature="method#windowOutput#0;class#OutputGraph#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -682,32 +692,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chubrickdm/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="222">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="class#Edge#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="method#Graph#1;class#Graph#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#info#0;class#Graph#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chubrickdm/OutputGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="38" column="4" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#consoleMatrixOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#consoleListOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#consoleOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#windowOutput#0;class#OutputGraph#0" expanded="false" />
+            <element signature="method#OutputGraph#0;class#OutputGraph#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chubrickdm/InputGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="295" column="4" lean-forward="true" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
+        <state relative-caret-position="102">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#keyInput#0;class#InputGraph#0" expanded="false" />
             <element signature="method#keyInputGraphOnMatrix#0;class#InputGraph#0" expanded="false" />
             <element signature="method#keyInputGraphOnList#0;class#InputGraph#0" expanded="false" />

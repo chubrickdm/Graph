@@ -345,7 +345,7 @@ class InputGraph{
 		String inputMethod;
 		boolean userSelect = false;
 		
-		while (userSelect != true){
+		while (!userSelect){
 			System.out.print ("Select the input method. Enter 'f' if you want input from file or 'k' from keyboard: ");
 			inputMethod = scanner.next ();
 			

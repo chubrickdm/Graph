@@ -11,7 +11,7 @@ public class Graph{
 	int[][] matrix = new int[5][5];
 	int numVertex = 0;
 	int numEdge = 0;
-	ArrayList <ArrayList <Edge>> list = new ArrayList <ArrayList <Edge>> ();
+	ArrayList <ArrayList <Edge>> list;
 	static class Edge{
 		public int index;
 		public int weight;
@@ -33,6 +33,7 @@ public class Graph{
 	public Graph (){ }
 	////////////////////////////////////////////////////////
 	public void input (){
+		list = new ArrayList <ArrayList <Edge>> ();
 		InputGraph input = new InputGraph (this);
 	}
 	
