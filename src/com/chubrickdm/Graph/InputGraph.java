@@ -14,6 +14,7 @@ class InputGraph{
 	private Scanner scanner = new Scanner (System.in);
 	private String fileName;
 	
+	
 	private void keyInput (){
 		try{
 			selectStorageMethod ();
@@ -40,9 +41,16 @@ class InputGraph{
 	private void keyInputGraphOnMatrix (){
 		graph.matrix = new int[graph.numVertex + 1][graph.numVertex + 1];
 		System.out.println ("Enter the vertex incidence matrix:");
+		int tmpInt;
 		for (int i = 1; i < graph.numVertex + 1; i++){
 			for (int j = 1; j < graph.numVertex + 1; j++){
-				graph.matrix[i][j] = scanner.nextInt ();
+				tmpInt = scanner.nextInt ();
+				if (graph.matrix[i][j] == 0){
+					graph.matrix[i][j] = tmpInt;
+					if (!graph.isOrgraph && tmpInt != graph.noEdgeValue){
+						graph.matrix[j][i] = graph.matrix[i][j];
+					}
+				}
 			}
 		}
 		
@@ -169,11 +177,19 @@ class InputGraph{
 			StringTokenizer tokens = new StringTokenizer (line);
 			graph.numVertex = Integer.parseInt (tokens.nextToken ());
 			graph.matrix = new int[graph.numVertex + 1][graph.numVertex + 1];
+			int tmpInt;
 			for (int i = 1; i < graph.numVertex + 1; i++){
 				line = br.readLine ();
 				tokens = new StringTokenizer (line);
 				for (int j = 1; j < graph.numVertex + 1; j++){
-					graph.matrix[i][j] = Integer.parseInt (tokens.nextToken ());
+					tmpInt = Integer.parseInt (tokens.nextToken ());
+					if (graph.matrix[i][j] == 0){
+						graph.matrix[i][j] = tmpInt;
+						if (!graph.isOrgraph && tmpInt != graph.noEdgeValue){
+							graph.matrix[j][i] = graph.matrix[i][j];
+						}
+					}
+					
 				}
 			}
 		}
@@ -297,14 +313,12 @@ class InputGraph{
 		
 		for (int i = 1; i < graph.numVertex + 1; i++){
 			for (int j = 1; j < graph.numVertex + 1; j++){
-				graph.matrix [i][j] = graph.noEdgeValue;
+				graph.matrix[i][j] = graph.noEdgeValue;
 			}
 			
-			
-				for (Graph.Edge tmpE : graph.list.get (i)){
-					graph.matrix[i][tmpE.index] = tmpE.weight;
-				}
-			
+			for (Graph.Edge tmpE : graph.list.get (i)){
+				graph.matrix[i][tmpE.index] = tmpE.weight;
+			}
 		}
 	}
 	
