@@ -1,5 +1,6 @@
-package com.chubrickdm.Graph;
+package com.chub.Graph;
 
+import com.chub.Graph.StorageMethod.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -62,7 +63,7 @@ class InputGraph{
 		
 		try{
 			System.out.println ("Enter the list incidence matrix: ");
-			Graph.Edge tmpE;
+			Pair tmpE;
 			InputStreamReader isr = new InputStreamReader (System.in);
 			BufferedReader br = new BufferedReader (isr);
 			String line;
@@ -103,46 +104,46 @@ class InputGraph{
 	}
 	
 	private void keyInputWeightedOrgraphOnList (int firstV, int secondV, StringTokenizer tokens){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		int weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		tmpE.weight = weight;
 		graph.list.get (firstV).add (tmpE);
 	}
 	
 	private void keyInputWeightedNoOrgraphOnList (int firstV, int secondV, StringTokenizer tokens){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		int weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		tmpE.weight = weight;
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = firstV;
 		tmpE.weight = weight;
 		graph.list.get (secondV).add (tmpE);
 	}
 	
 	private void keyInputNoWeightedOrgraphOnList (int firstV, int secondV){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		graph.list.get (firstV).add (tmpE);
 	}
 	
 	private void keyInputNoWeightedNoOrgraphOnList (int firstV, int secondV){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = firstV;
 		graph.list.get (secondV).add (tmpE);
 	}
@@ -245,47 +246,47 @@ class InputGraph{
 	}
 	
 	private void fileInputWeightedOrgraphOnList (int firstV, int secondV, StringTokenizer tokens){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		int weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		tmpE.weight = weight;
 		graph.list.get (firstV).add (tmpE);
 	}
 	
 	private void fileInputWeightedNoOrgraphOnList (int firstV, int secondV, StringTokenizer tokens){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		int weight;
 		weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		tmpE.weight = weight;
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = firstV;
 		tmpE.weight = weight;
 		graph.list.get (secondV).add (tmpE);
 	}
 	
 	private void fileInputNoWeightedOrgraphOnList (int firstV, int secondV){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		graph.list.get (firstV).add (tmpE);
 	}
 	
 	private void fileInputNoWeightedNoOrgraphOnList (int firstV, int secondV){
-		Graph.Edge tmpE;
+		Pair tmpE;
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = secondV;
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Graph.Edge ();
+		tmpE = new Pair ();
 		tmpE.index = firstV;
 		graph.list.get (secondV).add (tmpE);
 	}
@@ -295,11 +296,11 @@ class InputGraph{
 	private void createListBasedOnMatrix (){
 		initializeList ();
 		
-		Graph.Edge tmpE;
+		Pair tmpE;
 		for (int i = 1; i < graph.numVertex + 1; i++){
 			for (int j = 1; j < graph.numVertex + 1; j++){
 				if (graph.matrix[i][j] != graph.noEdgeValue){
-					tmpE = new Graph.Edge ();
+					tmpE = new Pair ();
 					tmpE.index = j;
 					tmpE.weight = graph.matrix[i][j];
 					graph.list.get (i).add (tmpE);
@@ -316,7 +317,7 @@ class InputGraph{
 				graph.matrix[i][j] = graph.noEdgeValue;
 			}
 			
-			for (Graph.Edge tmpE : graph.list.get (i)){
+			for (Pair tmpE : graph.list.get (i)){
 				graph.matrix[i][tmpE.index] = tmpE.weight;
 			}
 		}
@@ -324,7 +325,7 @@ class InputGraph{
 	
 	private void initializeList (){
 		for (int i = 0; i <= graph.numVertex; i++){
-			graph.list.add (new ArrayList <Graph.Edge> ());
+			graph.list.add (new ArrayList <Pair> ());
 		}
 	}
 	

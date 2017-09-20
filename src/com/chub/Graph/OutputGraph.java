@@ -1,10 +1,12 @@
-package com.chubrickdm.Graph;
+package com.chub.Graph;
+
+import com.chub.Graph.StorageMethod.Pair;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class OutputGraph{
+public class OutputGraph{
 	private Graph graph;
 	private Scanner scanner = new Scanner (System.in);
 	
@@ -21,18 +23,18 @@ class OutputGraph{
 	private void consoleListOutput (){
 		if (graph.isWeightedGraph){
 			int i = 0;
-			for (ArrayList <Graph.Edge> tmpList : graph.list){
-				for (Graph.Edge tmpEdge : tmpList){
-					System.out.println ("\t" + (i) + " \t" + tmpEdge.index + " \t" + tmpEdge.weight);
+			for (ArrayList <Pair> tmpList : graph.list){
+				for (Pair tmpPair : tmpList){
+					System.out.println ("\t" + (i) + " \t" + tmpPair.index + " \t" + tmpPair.weight);
 				}
 				i++;
 			}
 		}
 		else{
 			int i = 0;
-			for (ArrayList <Graph.Edge> tmpList : graph.list){
-				for (Graph.Edge tmpEdge : tmpList){
-					System.out.println ("\t" + (i) + " \t" + tmpEdge.index);
+			for (ArrayList <Pair> tmpList : graph.list){
+				for (Pair tmpPair : tmpList){
+					System.out.println ("\t" + (i) + " \t" + tmpPair.index);
 				}
 				i++;
 			}
@@ -60,12 +62,6 @@ class OutputGraph{
 				System.out.println ("ERROR! Enter 'm' or 'l'.");
 			}
 		}
-	}
-	
-	//////////////////////////////////////////////////////////
-	
-	private void windowOutput (){
-	
 	}
 	
 	//////////////////////////////////////////////////////////
@@ -103,6 +99,8 @@ class OutputGraph{
 			fileName = brIn.readLine ();
 			brOut = new BufferedWriter (new FileWriter (fileName));
 			
+			brOut.write (graph.numVertex);
+			brOut.newLine ();
 			for (int i = 1; i < graph.numVertex + 1; i++){
 				for (int j = 1; j < graph.numVertex + 1; j++){
 					brOut.write ("\t" + graph.matrix[i][j] + " ");
@@ -127,11 +125,13 @@ class OutputGraph{
 			fileName = brIn.readLine ();
 			brOut = new BufferedWriter (new FileWriter (fileName));
 			
+			brOut.write (graph.numVertex);
+			brOut.newLine ();
 			if (graph.isWeightedGraph){
 				int i = 0;
-				for (ArrayList <Graph.Edge> tmpList : graph.list){
-					for (Graph.Edge tmpEdge : tmpList){
-						brOut.write ("\t" + (i) + " \t" + tmpEdge.index + " \t" + tmpEdge.weight);
+				for (ArrayList <Pair> tmpList : graph.list){
+					for (Pair tmpPair : tmpList){
+						brOut.write ("\t" + (i) + " \t" + tmpPair.index + " \t" + tmpPair.weight);
 						brOut.newLine ();
 					}
 					i++;
@@ -139,9 +139,9 @@ class OutputGraph{
 			}
 			else{
 				int i = 0;
-				for (ArrayList <Graph.Edge> tmpList : graph.list){
-					for (Graph.Edge tmpEdge : tmpList){
-						brOut.write ("\t" + (i) + " \t" + tmpEdge.index);
+				for (ArrayList <Pair> tmpList : graph.list){
+					for (Pair tmpPair : tmpList){
+						brOut.write ("\t" + (i) + " \t" + tmpPair.index);
 						brOut.newLine ();
 					}
 					i++;
@@ -163,16 +163,12 @@ class OutputGraph{
 		boolean userSelect = false;
 		
 		while (userSelect != true){
-			System.out.println ("Select the output method.");
-			System.out.print ("Enter 'c' if you want output from console, 'w' from window or 'f' from file: ");
+			System.out.println ("\nSelect the output method.");
+			System.out.print ("Enter 'c' if you want output from console or 'f' from file: ");
 			outputMethod = scanner.next ();
 			
 			if (outputMethod.equals ("c")){
 				consoleOutput ();
-				userSelect = true;
-			}
-			else if (outputMethod.equals ("w")){
-				windowOutput ();
 				userSelect = true;
 			}
 			else if (outputMethod.equals ("f")){
@@ -180,7 +176,7 @@ class OutputGraph{
 				userSelect = true;
 			}
 			else{
-				System.out.println ("ERROR! Enter 'c', 'w' or 'f'.");
+				System.out.println ("ERROR! Enter 'c' or 'f'.");
 			}
 		}
 	}

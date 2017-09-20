@@ -1,21 +1,21 @@
-package com.chubrickdm.Graph;
+package com.chub.Graph;
 
+import com.chub.Graph.StorageMethod.*;
 import java.util.ArrayList;
 
 public class Graph{
+	OrGraph orGraph;
+	UnorGraph unorGraph;
 	boolean isWeightedGraph = false;
 	boolean isOrgraph = false;
 	boolean graphOnList = false;
-	int noEdgeValue = -1;
-	int existEdgeValue = 0;
-	int[][] matrix = new int[5][5];
+	int noEdgeValue = 0;
+	int existEdgeValue = 1;
 	int numVertex = 0;
 	int numEdge = 0;
-	ArrayList <ArrayList <Edge>> list;
-	static class Edge{
-		public int index;
-		public int weight;
-	}
+	int[][] matrix;
+	ArrayList <ArrayList <Pair>> list;
+	
 	
 	////////////////////////////////////////////////////////
 	public Graph (boolean isOrgraph, boolean isWeightedGraph){
@@ -31,9 +31,11 @@ public class Graph{
 	}
 	
 	public Graph (){ }
+	
 	////////////////////////////////////////////////////////
+	
 	public void input (){
-		list = new ArrayList <ArrayList <Edge>> ();
+		list = new ArrayList <ArrayList <Pair>> ();
 		InputGraph input = new InputGraph (this);
 	}
 	
