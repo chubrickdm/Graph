@@ -1,49 +1,86 @@
 package com.chub.Graph;
 
 import com.chub.Graph.StorageMethod.*;
-import java.util.ArrayList;
+
+import java.util.Scanner;
 
 public class Graph{
-	OrGraph orGraph;
-	UnorGraph unorGraph;
-	boolean isWeightedGraph = false;
-	boolean isOrgraph = false;
-	boolean graphOnList = false;
-	int noEdgeValue = 0;
-	int existEdgeValue = 1;
-	int numVertex = 0;
-	int numEdge = 0;
-	int[][] matrix;
-	ArrayList <ArrayList <Pair>> list;
+	Storage storage = Storage.unknown;
+	StorageMatrix matrix = new StorageMatrix ();
+	StorageList list = new StorageList ();
 	
 	
-	////////////////////////////////////////////////////////
-	public Graph (boolean isOrgraph, boolean isWeightedGraph){
-		this.isOrgraph = isOrgraph;
-		this.isWeightedGraph = isWeightedGraph;
+	private void selectStorageMethod (){
+		String inputMethod;
+		boolean userSelect = false;
+		
+		while (!userSelect){
+			Scanner scanner = new Scanner (System.in);
+			System.out.print ("Select the storage method. Enter 'm' if you want store in matrix or 'l' in list: ");
+			inputMethod = scanner.next ();
+			
+			if (inputMethod.equals ("m")){
+				storage = Storage.matrix;
+				userSelect = true;
+			}
+			else if (inputMethod.equals ("l")){
+				storage = Storage.list;
+				userSelect = true;
+			}
+			else{
+				System.out.println ("ERROR! Enter 'm' or 'l'.");
+			}
+		}
 	}
 	
-	public Graph (boolean isOrgraph, boolean isWeightedGraph, int noEdgeValue, int existEdgeValue){
-		this.isOrgraph = isOrgraph;
-		this.isWeightedGraph = isWeightedGraph;
-		this.noEdgeValue = noEdgeValue;
-		this.existEdgeValue = existEdgeValue;
+	public Graph (Storage storage){
+		this.storage = storage;
 	}
 	
-	public Graph (){ }
+	public Graph (){}
 	
-	////////////////////////////////////////////////////////
 	
 	public void input (){
-		list = new ArrayList <ArrayList <Pair>> ();
-		InputGraph input = new InputGraph (this);
+		if (storage == Storage.unknown){
+			selectStorageMethod ();
+		}
+		
+		switch (storage){
+		case list:
+			list.selectInputMethod ();
+			matrix.createMatrixBasedOnList (list);
+			break;
+		case matrix:
+			matrix.selectInputMethod ();
+			list.createListBasedOnMatrix (matrix);
+			break;
+		}
 	}
 	
 	public void output (){
-		OutputGraph output = new OutputGraph (this);
+		String inputMethod;
+		boolean userSelect = false;
+		
+		while (!userSelect){
+			Scanner scanner = new Scanner (System.in);
+			System.out.print ("Select the input type. Enter 'm' if you want input matrix or 'l' list: ");
+			inputMethod = scanner.next ();
+			
+			if (inputMethod.equals ("m")){
+				matrix.selectOutputMethod ();
+				userSelect = true;
+			}
+			else if (inputMethod.equals ("l")){
+				list.selectOutputMethod ();
+				userSelect = true;
+			}
+			else{
+				System.out.println ("ERROR! Enter 'm' or 'l'.");
+			}
+		}
 	}
 	
-	public void info (){
+	/*public void info (){
 		System.out.println ("---------Information about your graph---------");
 		System.out.println ("Is orgraph - " + isOrgraph + ".");
 		System.out.println ("Is weighted graph - " + isWeightedGraph + ".");
@@ -59,5 +96,5 @@ public class Graph{
 		System.out.println ("No edge value - " + noEdgeValue + ".");
 		System.out.println ("Number of vertices - " + numVertex + ".");
 		System.out.println ("----------------------------------------------");
-	}
+	}*/
 }

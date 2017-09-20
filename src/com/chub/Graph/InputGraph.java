@@ -1,3 +1,4 @@
+/*
 package com.chub.Graph;
 
 import com.chub.Graph.StorageMethod.*;
@@ -107,9 +108,7 @@ class InputGraph{
 		Pair tmpE;
 		int weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Pair ();
-		tmpE.index = secondV;
-		tmpE.weight = weight;
+		tmpE = new Pair (secondV, weight);
 		graph.list.get (firstV).add (tmpE);
 	}
 	
@@ -117,33 +116,28 @@ class InputGraph{
 		Pair tmpE;
 		int weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Pair ();
-		tmpE.index = secondV;
-		tmpE.weight = weight;
+		tmpE = new Pair (secondV, weight);
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Pair ();
-		tmpE.index = firstV;
-		tmpE.weight = weight;
+		tmpE = new Pair (firstV, weight);
 		graph.list.get (secondV).add (tmpE);
 	}
 	
 	private void keyInputNoWeightedOrgraphOnList (int firstV, int secondV){
 		Pair tmpE;
 		
-		tmpE = new Pair ();
-		tmpE.index = secondV;
+		tmpE = new Pair (secondV, 1);
 		graph.list.get (firstV).add (tmpE);
 	}
 	
 	private void keyInputNoWeightedNoOrgraphOnList (int firstV, int secondV){
 		Pair tmpE;
 		
-		tmpE = new Pair ();
+		tmpE = new Pair (secondV, 1);
 		tmpE.index = secondV;
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Pair ();
+		tmpE = new Pair (firstV, 1);
 		tmpE.index = firstV;
 		graph.list.get (secondV).add (tmpE);
 	}
@@ -249,9 +243,7 @@ class InputGraph{
 		Pair tmpE;
 		int weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Pair ();
-		tmpE.index = secondV;
-		tmpE.weight = weight;
+		tmpE = new Pair (secondV, weight);
 		graph.list.get (firstV).add (tmpE);
 	}
 	
@@ -260,21 +252,17 @@ class InputGraph{
 		int weight;
 		weight = Integer.parseInt (tokens.nextToken ());
 		
-		tmpE = new Pair ();
-		tmpE.index = secondV;
-		tmpE.weight = weight;
+		tmpE = new Pair (secondV, weight);
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Pair ();
-		tmpE.index = firstV;
-		tmpE.weight = weight;
+		tmpE = new Pair (firstV, weight);
 		graph.list.get (secondV).add (tmpE);
 	}
 	
 	private void fileInputNoWeightedOrgraphOnList (int firstV, int secondV){
 		Pair tmpE;
 		
-		tmpE = new Pair ();
+		tmpE = new Pair (secondV, 1);
 		tmpE.index = secondV;
 		graph.list.get (firstV).add (tmpE);
 	}
@@ -282,12 +270,10 @@ class InputGraph{
 	private void fileInputNoWeightedNoOrgraphOnList (int firstV, int secondV){
 		Pair tmpE;
 		
-		tmpE = new Pair ();
-		tmpE.index = secondV;
+		tmpE = new Pair (secondV, 1);
 		graph.list.get (firstV).add (tmpE);
 		
-		tmpE = new Pair ();
-		tmpE.index = firstV;
+		tmpE = new Pair (firstV, 1);
 		graph.list.get (secondV).add (tmpE);
 	}
 	
@@ -300,9 +286,7 @@ class InputGraph{
 		for (int i = 1; i < graph.numVertex + 1; i++){
 			for (int j = 1; j < graph.numVertex + 1; j++){
 				if (graph.matrix[i][j] != graph.noEdgeValue){
-					tmpE = new Pair ();
-					tmpE.index = j;
-					tmpE.weight = graph.matrix[i][j];
+					tmpE = new Pair (j, graph.matrix[i][j]);
 					graph.list.get (i).add (tmpE);
 				}
 			}
@@ -419,4 +403,4 @@ class InputGraph{
 			}
 		}
 	}
-}
+}*/

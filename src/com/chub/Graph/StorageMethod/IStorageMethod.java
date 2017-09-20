@@ -4,7 +4,10 @@ import java.io.*;
 import java.util.Scanner;
 
 public abstract class IStorageMethod{
-	protected String fileName;
+	public int numVertex = 0;
+	public int numEdge = 0;
+	private String fileName;
+	
 	abstract protected void inputGraph (BufferedReader br);
 	abstract protected void outputGraph (BufferedWriter bw);
 	
@@ -55,15 +58,11 @@ public abstract class IStorageMethod{
 		
 		while (userSelect != true){
 			Scanner scanner = new Scanner (System.in);
-			System.out.println ("\nSelect the output method.");
+			System.out.println ("Select the output method.");
 			System.out.print ("Enter 'c' if you want output from console or 'f' from file: ");
 			outputMethod = scanner.next ();
 			
-			if (outputMethod.equals ("c")){
-				outputGraph (new BufferedWriter (new OutputStreamWriter (System.out)));
-				userSelect = true;
-			}
-			else if (outputMethod.equals ("f")){
+			if (outputMethod.equals ("f")){
 				enterName ();
 				try{
 					outputGraph (new BufferedWriter (new FileWriter (fileName)));
@@ -71,6 +70,10 @@ public abstract class IStorageMethod{
 				catch (IOException e){
 					System.out.println ("ERROR! File is locked.");
 				}
+				userSelect = true;
+			}
+			else if (outputMethod.equals ("c")){
+				outputGraph (new BufferedWriter (new OutputStreamWriter (System.out)));
 				userSelect = true;
 			}
 			else{
