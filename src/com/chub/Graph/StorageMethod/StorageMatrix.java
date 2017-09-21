@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 public class StorageMatrix extends IStorageMethod{
 	private int [][] matrix;
 	
+	
 	@Override
 	protected void outputGraph (BufferedWriter bw){
 		try{
@@ -46,6 +47,7 @@ public class StorageMatrix extends IStorageMethod{
 			System.out.println ("ERROR! Input error.");
 		}
 	}
+	
 	
 	public void createMatrixBasedOnList (StorageList tmpList){
 		numVertex = tmpList.numVertex;

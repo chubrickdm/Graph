@@ -1,13 +1,16 @@
 package com.chub.Graph;
 
+import com.chub.Graph.Algorithm.BreadthSearch;
 import com.chub.Graph.StorageMethod.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Graph{
-	Storage storage = Storage.unknown;
-	StorageMatrix matrix = new StorageMatrix ();
-	StorageList list = new StorageList ();
+	private int numVertex;
+	private Storage storage = Storage.unknown;
+	private StorageMatrix matrix = new StorageMatrix ();
+	private StorageList list = new StorageList ();
 	
 	
 	private void selectStorageMethod (){
@@ -33,6 +36,7 @@ public class Graph{
 		}
 	}
 	
+	
 	public Graph (Storage storage){
 		this.storage = storage;
 	}
@@ -55,6 +59,8 @@ public class Graph{
 			list.createListBasedOnMatrix (matrix);
 			break;
 		}
+		
+		numVertex = matrix.getNumVertex ();
 	}
 	
 	public void output (){
@@ -80,21 +86,28 @@ public class Graph{
 		}
 	}
 	
-	/*public void info (){
-		System.out.println ("---------Information about your graph---------");
-		System.out.println ("Is orgraph - " + isOrgraph + ".");
-		System.out.println ("Is weighted graph - " + isWeightedGraph + ".");
-		if (!graphOnList){
-			System.out.println ("Storage method - matrix.");
+	public void conectedComponents (){
+		int numComponents = 1;
+		ArrayList <ArrayList <Integer>> allComponents = new ArrayList <> ();
+		BreadthSearch bs = new BreadthSearch (this);
+		bs.startSearch (1);
+		allComponents.add (1, bs.getConectedComponents ());
+		
+		for (int i = 1; i < numVertex + 1; i++){
+			if (i == allComponents.get (numComponents).get (0) && !allComponents.get (numComponents).isEmpty ()){
+				allComponents.get (numComponents).remove (0);
+			}
+			else{
+			
+			}
 		}
-		else{
-			System.out.println ("Storage method - list.");
+		
+		for (Integer tmpI : components){
+			System.out.println (tmpI);
 		}
-		if (!isWeightedGraph){
-			System.out.println ("Exist edge value - " + existEdgeValue + ".");
-		}
-		System.out.println ("No edge value - " + noEdgeValue + ".");
-		System.out.println ("Number of vertices - " + numVertex + ".");
-		System.out.println ("----------------------------------------------");
-	}*/
+	}
+	
+	public StorageList getList (){
+		return list;
+	}
 }

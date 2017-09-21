@@ -15,6 +15,7 @@ public class StorageList extends IStorageMethod{
 		}
 	}
 	
+	
 	@Override
 	protected void outputGraph (BufferedWriter bw){
 		try{
@@ -70,6 +71,7 @@ public class StorageList extends IStorageMethod{
 			System.out.println ("ERROR! Input error.");
 		}
 	}
+	
 	
 	public void createListBasedOnMatrix (StorageMatrix tmpMatrix){
 		numVertex = tmpMatrix.numVertex;

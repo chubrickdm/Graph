@@ -4,12 +4,10 @@ import java.io.*;
 import java.util.Scanner;
 
 public abstract class IStorageMethod{
-	public int numVertex = 0;
-	public int numEdge = 0;
-	private String fileName;
+	protected int numVertex = 0;
+	protected int numEdge = 0;
+	protected String fileName;
 	
-	abstract protected void inputGraph (BufferedReader br);
-	abstract protected void outputGraph (BufferedWriter bw);
 	
 	private void enterName (){
 		System.out.print ("Enter the file name: ");
@@ -22,6 +20,11 @@ public abstract class IStorageMethod{
 			System.out.println ("ERROR! Input error.");
 		}
 	}
+	
+	
+	abstract protected void inputGraph (BufferedReader br);
+	abstract protected void outputGraph (BufferedWriter bw);
+	
 	
 	public void selectInputMethod (){
 		String inputMethod;
@@ -43,6 +46,7 @@ public abstract class IStorageMethod{
 				userSelect = true;
 			}
 			else if (inputMethod.equals ("k")){
+				System.out.println ("Enter the number of vertices and then the graph.");
 				inputGraph (new BufferedReader (new InputStreamReader (System.in)));
 				userSelect = true;
 			}
@@ -73,6 +77,7 @@ public abstract class IStorageMethod{
 				userSelect = true;
 			}
 			else if (outputMethod.equals ("c")){
+				System.out.println ("Your graph.");
 				outputGraph (new BufferedWriter (new OutputStreamWriter (System.out)));
 				userSelect = true;
 			}
@@ -80,5 +85,9 @@ public abstract class IStorageMethod{
 				System.out.println ("ERROR! Enter 'c' or 'f'.");
 			}
 		}
+	}
+	
+	public int getNumVertex (){
+		return numVertex;
 	}
 }

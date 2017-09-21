@@ -2,6 +2,7 @@ package com.mycompany;
 
 import com.chub.Graph.Graph;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main{
@@ -12,7 +13,8 @@ public class Main{
 		Graph g = new Graph ();
 		while (!comand.equals ("4")){
 			System.out.println ("\n------------Menu------------");
-			System.out.println ("1-new graph\n2-input graph\n3-output graph\n4-exit");
+			System.out.println ("1-new graph\n2-input graph\n3-output graph\n4-search conected components");
+			System.out.println ("5-exit");
 			System.out.print ("Select an action: ");
 			comand = in.next ();
 			if (comand.equals ("1")){
@@ -25,10 +27,13 @@ public class Main{
 				g.output ();
 			}
 			else if (comand.equals ("4")){
+				g.conectedComponents ();
+			}
+			else if (comand.equals ("5")){
 				System.out.println ("\nGood bye.");
 			}
 			else{
-				System.out.println ("Enter '1', '2', '3' or '4'.");
+				System.out.println ("Enter '1', '2', '3', '4' or '5'.");
 			}
 		}
 	}
