@@ -1,5 +1,6 @@
 package com.chub.Graph.StorageMethod;
 
+import com.chub.Graph.Orientation;
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -62,5 +63,19 @@ public class StorageMatrix extends IStorageMethod{
 	
 	public int[][] getMatrix (){
 		return matrix;
+	}
+	
+	@Override
+	public Orientation getOrientation (){
+		for (int i = 1; i < numVertex + 1; i++){
+			for (int j = i; j < numVertex + 1; j++){
+				if (matrix[i][j] != matrix[j][i]){
+					orientation = Orientation.oriented;
+					return orientation;
+				}
+			}
+		}
+		orientation = Orientation.unOriented;
+		return orientation;
 	}
 }

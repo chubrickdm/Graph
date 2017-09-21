@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35d4a1e0-84c5-443a-a3da-5a030cf19ef5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/chub/Graph/Algorithm/BreadthSearch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/chub/Graph/Algorithm/DepthSearch.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/chub/Graph/Orientation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/Algorithm/BreadthSearch.class" afterPath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/Algorithm/BreadthSearch.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/Graph$1.class" afterPath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/Graph$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/Graph.class" afterPath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/Graph.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/StorageMethod/IStorageMethod.class" afterPath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/StorageMethod/IStorageMethod.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/StorageMethod/StorageList.class" afterPath="$PROJECT_DIR$/out/production/Graph/com/chub/Graph/StorageMethod/StorageList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Graph/com/mycompany/Main.class" afterPath="$PROJECT_DIR$/out/production/Graph/com/mycompany/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chub/Graph/Algorithm/BreadthSearch.java" afterPath="$PROJECT_DIR$/src/com/chub/Graph/Algorithm/BreadthSearch.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chub/Graph/Graph.java" afterPath="$PROJECT_DIR$/src/com/chub/Graph/Graph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/IStorageMethod.java" afterPath="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/IStorageMethod.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageList.java" afterPath="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageList.java" />
@@ -30,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="187">
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,17 +45,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+            <state relative-caret-position="527">
+              <caret line="105" column="4" lean-forward="true" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+                <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+                <element signature="method#input#0;class#Graph#0" expanded="false" />
                 <element signature="method#output#0;class#Graph#0" expanded="false" />
-                <element signature="e#2520#2521#0" expanded="true" />
-                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+                <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+                <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+                <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+                <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -61,13 +69,13 @@
       <file leaf-file-name="BreadthSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Algorithm/BreadthSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="272">
+              <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#breadthSearch#0;class#BreadthSearch#0" expanded="false" />
                 <element signature="method#startSearch#0;class#BreadthSearch#0" expanded="false" />
-                <element signature="method#getConectedComponents#0;class#BreadthSearch#0" expanded="false" />
+                <element signature="method#BreadthSearch#0;class#BreadthSearch#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,10 +84,9 @@
       <file leaf-file-name="IStorageMethod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/IStorageMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="88" column="4" lean-forward="true" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+            <state relative-caret-position="34">
+              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#enterName#0;class#IStorageMethod#0" expanded="false" />
                 <element signature="method#selectInputMethod#0;class#IStorageMethod#0" expanded="false" />
                 <element signature="method#selectOutputMethod#0;class#IStorageMethod#0" expanded="false" />
@@ -91,13 +98,14 @@
       <file leaf-file-name="StorageMatrix.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="68" column="40" lean-forward="false" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#outputGraph#0;class#StorageMatrix#0" expanded="false" />
                 <element signature="method#inputGraph#0;class#StorageMatrix#0" expanded="false" />
                 <element signature="method#createMatrixBasedOnList#0;class#StorageMatrix#0" expanded="false" />
+                <element signature="method#getOrientation#0;class#StorageMatrix#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,14 +114,15 @@
       <file leaf-file-name="StorageList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="476">
+              <caret line="97" column="40" lean-forward="false" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initializeList#0;class#StorageList#0" expanded="false" />
                 <element signature="method#outputGraph#0;class#StorageList#0" expanded="false" />
                 <element signature="method#inputGraph#0;class#StorageList#0" expanded="false" />
                 <element signature="method#createListBasedOnMatrix#0;class#StorageList#0" expanded="false" />
+                <element signature="method#getOrientation#0;class#StorageList#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -125,8 +134,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -137,12 +146,15 @@
       <find>graph.</find>
       <find>graphList</find>
       <find>vertexList</find>
+      <find>System.out.println</find>
+      <find>arrayVert</find>
     </findStrings>
     <replaceStrings>
       <replace>scanner</replace>
       <replace>Pair</replace>
       <replace>graph</replace>
       <replace>list</replace>
+      <replace>arrayConectComp</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -180,12 +192,13 @@
         <option value="$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" />
         <option value="$PROJECT_DIR$/src/com/chub/Graph/Storage.java" />
         <option value="$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
-        <option value="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageMatrix.java" />
-        <option value="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageList.java" />
         <option value="$PROJECT_DIR$/src/com/mycompany/Main.java" />
         <option value="$PROJECT_DIR$/src/com/chub/Graph/Algorithm/BreadthSearch.java" />
         <option value="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/IStorageMethod.java" />
+        <option value="$PROJECT_DIR$/src/com/chub/Graph/Orientation.java" />
+        <option value="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageMatrix.java" />
         <option value="$PROJECT_DIR$/src/com/chub/Graph/Graph.java" />
+        <option value="$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageList.java" />
       </list>
     </option>
   </component>
@@ -238,7 +251,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,9 +289,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +448,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34811166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -451,26 +464,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resourse/matrix.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="114" column="4" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -488,21 +487,19 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" />
     <entry file="file://$PROJECT_DIR$/resourse/list.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -517,14 +514,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="126" column="29" lean-forward="true" selection-start-line="126" selection-start-column="29" selection-end-line="126" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -542,29 +532,20 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -582,29 +563,20 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -622,29 +594,20 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -662,29 +625,20 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="170" column="20" lean-forward="true" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -702,9 +656,14 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -726,9 +685,14 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -793,30 +757,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/UnorGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OrGraph.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/OutputGraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/InputGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Algorithm/DepthSearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -833,62 +775,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageMatrix.java">
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Orientation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#outputGraph#0;class#StorageMatrix#0" expanded="false" />
-            <element signature="method#inputGraph#0;class#StorageMatrix#0" expanded="false" />
-            <element signature="method#createMatrixBasedOnList#0;class#StorageMatrix#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initializeList#0;class#StorageList#0" expanded="false" />
-            <element signature="method#outputGraph#0;class#StorageList#0" expanded="false" />
-            <element signature="method#inputGraph#0;class#StorageList#0" expanded="false" />
-            <element signature="method#createListBasedOnMatrix#0;class#StorageList#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Algorithm/BreadthSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        <state relative-caret-position="272">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#breadthSearch#0;class#BreadthSearch#0" expanded="false" />
             <element signature="method#startSearch#0;class#BreadthSearch#0" expanded="false" />
-            <element signature="method#getConectedComponents#0;class#BreadthSearch#0" expanded="false" />
+            <element signature="method#BreadthSearch#0;class#BreadthSearch#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/IStorageMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="88" column="4" lean-forward="true" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+        <state relative-caret-position="34">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#enterName#0;class#IStorageMethod#0" expanded="false" />
             <element signature="method#selectInputMethod#0;class#IStorageMethod#0" expanded="false" />
             <element signature="method#selectOutputMethod#0;class#IStorageMethod#0" expanded="false" />
@@ -896,16 +816,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="68" column="40" lean-forward="false" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#outputGraph#0;class#StorageMatrix#0" expanded="false" />
+            <element signature="method#inputGraph#0;class#StorageMatrix#0" expanded="false" />
+            <element signature="method#createMatrixBasedOnList#0;class#StorageMatrix#0" expanded="false" />
+            <element signature="method#getOrientation#0;class#StorageMatrix#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/StorageMethod/StorageList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="97" column="40" lean-forward="false" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initializeList#0;class#StorageList#0" expanded="false" />
+            <element signature="method#outputGraph#0;class#StorageList#0" expanded="false" />
+            <element signature="method#inputGraph#0;class#StorageList#0" expanded="false" />
+            <element signature="method#createListBasedOnMatrix#0;class#StorageList#0" expanded="false" />
+            <element signature="method#getOrientation#0;class#StorageList#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chub/Graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        <state relative-caret-position="527">
+          <caret line="105" column="4" lean-forward="true" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectStorageMethod#0;class#Graph#0" expanded="false" />
+            <element signature="method#inputConectedComponents#0;class#Graph#0" expanded="false" />
+            <element signature="method#input#0;class#Graph#0" expanded="false" />
             <element signature="method#output#0;class#Graph#0" expanded="false" />
-            <element signature="e#2520#2521#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="method#conectedComponents#0;class#Graph#0" expanded="false" />
+            <marker date="1506013109614" expanded="false" signature="3075:3079" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3091:3094" ph=" }" />
+            <marker date="1506013109614" expanded="false" signature="3124:3128" ph=" { " />
+            <marker date="1506013109614" expanded="false" signature="3145:3148" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mycompany/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

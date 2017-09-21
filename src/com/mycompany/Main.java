@@ -2,7 +2,6 @@ package com.mycompany;
 
 import com.chub.Graph.Graph;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main{
@@ -11,7 +10,7 @@ public class Main{
 		Scanner in = new Scanner (System.in);
 		
 		Graph g = new Graph ();
-		while (!comand.equals ("4")){
+		while (!comand.equals ("5")){
 			System.out.println ("\n------------Menu------------");
 			System.out.println ("1-new graph\n2-input graph\n3-output graph\n4-search conected components");
 			System.out.println ("5-exit");

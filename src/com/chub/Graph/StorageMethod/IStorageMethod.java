@@ -1,5 +1,6 @@
 package com.chub.Graph.StorageMethod;
 
+import com.chub.Graph.Orientation;
 import java.io.*;
 import java.util.Scanner;
 
@@ -7,6 +8,7 @@ public abstract class IStorageMethod{
 	protected int numVertex = 0;
 	protected int numEdge = 0;
 	protected String fileName;
+	Orientation orientation = Orientation.unknown;
 	
 	
 	private void enterName (){
@@ -21,7 +23,7 @@ public abstract class IStorageMethod{
 		}
 	}
 	
-	
+	abstract public Orientation getOrientation ();
 	abstract protected void inputGraph (BufferedReader br);
 	abstract protected void outputGraph (BufferedWriter bw);
 	

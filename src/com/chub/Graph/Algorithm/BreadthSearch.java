@@ -10,7 +10,6 @@ public class BreadthSearch{
 	private int markValue = 1;
 	private int[] markVert;
 	private ArrayList <Integer> list = new ArrayList <> ();
-	private ArrayList <Integer> conectedComponents = new ArrayList <> ();
 	private ArrayList <ArrayList <Pair>> graph = new ArrayList <> ();
 	
 	
@@ -38,19 +37,18 @@ public class BreadthSearch{
 	
 	public BreadthSearch (Graph g){
 		graph = g.getList ().getList ();
-		numVertex = graph.size () - 1;
+		numVertex = g.getNumVertex ();
 		markVert = new int[numVertex + 1];
 		for (int i = 0; i < numVertex + 1; i++){
 			markVert[i] = 0;
 		}
 	}
 	
-	public ArrayList <Integer> getConectedComponents (){
-		for (int i = 1; i < numVertex + 1; i++){
-			if (markVert [i] == markValue){
-				conectedComponents.add (i);
-			}
-		}
-		return conectedComponents;
+	public int[] getConectedComponents (){
+		return markVert;
+	}
+	
+	public void setMarkValue (int markValue){
+		this.markValue = markValue;
 	}
 }

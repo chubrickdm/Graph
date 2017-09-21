@@ -1,5 +1,7 @@
 package com.chub.Graph.StorageMethod;
 
+import com.chub.Graph.Orientation;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -10,7 +12,7 @@ public class StorageList extends IStorageMethod{
 	
 	
 	private void initializeList (){
-		for (int i = 0; i <= numVertex + 1; i++){
+		for (int i = 0; i < numVertex + 1; i++){
 			list.add (new ArrayList <Pair> ());
 		}
 	}
@@ -90,5 +92,29 @@ public class StorageList extends IStorageMethod{
 	
 	public ArrayList <ArrayList <Pair>> getList (){
 		return list;
+	}
+	
+	@Override
+	public Orientation getOrientation (){
+		Pair tmpP;
+		boolean isArc = true;
+		for (int i = 1; i < list.size (); i++){
+			for (int j = 0; j < list.get (i).size (); j++){
+				tmpP = list.get (i).get (j);
+				for (Pair tmpP2 : list.get (tmpP.index)){
+					if (tmpP2.index == i){
+						isArc = false;
+					}
+				}
+				
+				if (isArc){
+					orientation = Orientation.oriented;
+					return orientation;
+				}
+				isArc = true;
+			}
+		}
+		orientation = Orientation.unOriented;
+		return orientation;
 	}
 }

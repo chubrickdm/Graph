@@ -1,13 +1,16 @@
 package com.chub.Graph;
 
 import com.chub.Graph.Algorithm.BreadthSearch;
-import com.chub.Graph.StorageMethod.*;
+import com.chub.Graph.StorageMethod.StorageList;
+import com.chub.Graph.StorageMethod.StorageMatrix;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Graph{
-	private int numVertex;
+	private Orientation orientation = Orientation.unknown;
+	private int numComponents = 0;
+	private int numVertex = 0;
+	private int [] arrayConectComp;
 	private Storage storage = Storage.unknown;
 	private StorageMatrix matrix = new StorageMatrix ();
 	private StorageList list = new StorageList ();
@@ -36,6 +39,19 @@ public class Graph{
 		}
 	}
 	
+	private void inputConectedComponents (){
+		System.out.println ("Your conected components:");
+		for (int i = 1; i < numComponents; i++){
+			System.out.print ("Conected components " + i + ": ");
+			for (int j = 1; j < numVertex + 1; j++){
+				if (arrayConectComp[j] == i){
+					System.out.print (j + " ");
+				}
+			}
+			System.out.println ();
+		}
+	}
+	
 	
 	public Graph (Storage storage){
 		this.storage = storage;
@@ -61,6 +77,8 @@ public class Graph{
 		}
 		
 		numVertex = matrix.getNumVertex ();
+		orientation = list.getOrientation ();
+		System.out.println (orientation);
 	}
 	
 	public void output (){
@@ -87,27 +105,30 @@ public class Graph{
 	}
 	
 	public void conectedComponents (){
-		int numComponents = 1;
-		ArrayList <ArrayList <Integer>> allComponents = new ArrayList <> ();
-		BreadthSearch bs = new BreadthSearch (this);
-		bs.startSearch (1);
-		allComponents.add (1, bs.getConectedComponents ());
-		
-		for (int i = 1; i < numVertex + 1; i++){
-			if (i == allComponents.get (numComponents).get (0) && !allComponents.get (numComponents).isEmpty ()){
-				allComponents.get (numComponents).remove (0);
+		if (orientation == Orientation.unOriented){
+			numComponents = 1;
+			arrayConectComp = new int[numVertex + 1];
+			BreadthSearch bs = new BreadthSearch (this);
+			for (int i = 1; i < numVertex + 1; i++){
+				if (arrayConectComp[i] == 0){
+					bs.setMarkValue (numComponents);
+					bs.startSearch (i);
+					arrayConectComp = bs.getConectedComponents ();
+					numComponents++;
+				}
 			}
-			else{
-			
-			}
+			inputConectedComponents ();
 		}
-		
-		for (Integer tmpI : components){
-			System.out.println (tmpI);
+		else{
+			System.out.println ("Graph should be unoriented.");
 		}
 	}
 	
 	public StorageList getList (){
 		return list;
+	}
+	
+	public int getNumVertex (){
+		return numVertex;
 	}
 }
