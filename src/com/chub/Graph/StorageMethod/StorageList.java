@@ -21,7 +21,7 @@ public class StorageList extends IStorageMethod{
 	@Override
 	protected void outputGraph (BufferedWriter bw){
 		try{
-			bw.write (String.valueOf(numVertex));
+			bw.write (String.valueOf (numVertex));
 			bw.newLine ();
 			
 			int i = 0;
@@ -42,12 +42,13 @@ public class StorageList extends IStorageMethod{
 	
 	@Override
 	protected void inputGraph (BufferedReader br){
-		String line;
 		boolean finishInput = false;
 		int firstV, secondV, weight;
+		String line;
+		StringTokenizer tokens;
 		try{
 			line = br.readLine ();
-			StringTokenizer tokens = new StringTokenizer (line);
+			tokens = new StringTokenizer (line);
 			numVertex = Integer.parseInt (tokens.nextToken ());
 			initializeList ();
 			while (!finishInput){
@@ -82,7 +83,7 @@ public class StorageList extends IStorageMethod{
 		Pair tmpE;
 		for (int i = 1; i < numVertex + 1; i++){
 			for (int j = 1; j < numVertex + 1; j++){
-				if (tmpMatrix.getMatrix ()[i][j] != 0){
+				if (tmpMatrix.getMatrix ()[i][j] != noPairValue){
 					tmpE = new Pair (j, tmpMatrix.getMatrix ()[i][j]);
 					list.get (i).add (tmpE);
 				}

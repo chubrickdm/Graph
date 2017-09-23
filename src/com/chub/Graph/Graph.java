@@ -1,28 +1,30 @@
 package com.chub.Graph;
 
-import com.chub.Graph.Algorithm.BreadthSearch;
+import com.chub.Graph.StorageMethod.Pair;
 import com.chub.Graph.StorageMethod.StorageList;
 import com.chub.Graph.StorageMethod.StorageMatrix;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Graph{
-	private Orientation orientation = Orientation.unknown;
-	private int numComponents = 0;
 	private int numVertex = 0;
+	private int numComponents = 0;
 	private int [] arrayConectComp;
 	private Storage storage = Storage.unknown;
+	private Orientation orientation = Orientation.unknown;
 	private StorageMatrix matrix = new StorageMatrix ();
 	private StorageList list = new StorageList ();
 	
 	
 	private void selectStorageMethod (){
-		String inputMethod;
 		boolean userSelect = false;
+		String inputMethod;
 		
 		while (!userSelect){
 			Scanner scanner = new Scanner (System.in);
-			System.out.print ("Select the storage method. Enter 'm' if you want store in matrix or 'l' in list: ");
+			System.out.println ("Select the storage method.");
+			System.out.print ("Enter 'm' if you want store in matrix or 'l' in list: ");
 			inputMethod = scanner.next ();
 			
 			if (inputMethod.equals ("m")){
@@ -39,26 +41,12 @@ public class Graph{
 		}
 	}
 	
-	private void inputConectedComponents (){
-		System.out.println ("Your conected components:");
-		for (int i = 1; i < numComponents; i++){
-			System.out.print ("Conected components " + i + ": ");
-			for (int j = 1; j < numVertex + 1; j++){
-				if (arrayConectComp[j] == i){
-					System.out.print (j + " ");
-				}
-			}
-			System.out.println ();
-		}
-	}
-	
 	
 	public Graph (Storage storage){
 		this.storage = storage;
 	}
 	
 	public Graph (){}
-	
 	
 	public void input (){
 		if (storage == Storage.unknown){
@@ -77,8 +65,7 @@ public class Graph{
 		}
 		
 		numVertex = matrix.getNumVertex ();
-		orientation = list.getOrientation ();
-		System.out.println (orientation);
+		orientation = matrix.getOrientation ();
 	}
 	
 	public void output (){
@@ -104,31 +91,15 @@ public class Graph{
 		}
 	}
 	
-	public void conectedComponents (){
-		if (orientation == Orientation.unOriented){
-			numComponents = 1;
-			arrayConectComp = new int[numVertex + 1];
-			BreadthSearch bs = new BreadthSearch (this);
-			for (int i = 1; i < numVertex + 1; i++){
-				if (arrayConectComp[i] == 0){
-					bs.setMarkValue (numComponents);
-					bs.startSearch (i);
-					arrayConectComp = bs.getConectedComponents ();
-					numComponents++;
-				}
-			}
-			inputConectedComponents ();
-		}
-		else{
-			System.out.println ("Graph should be unoriented.");
-		}
-	}
-	
-	public StorageList getList (){
-		return list;
+	public ArrayList <ArrayList<Pair>> getList (){
+		return list.getList ();
 	}
 	
 	public int getNumVertex (){
 		return numVertex;
+	}
+	
+	public Orientation getOrientation (){
+		return orientation;
 	}
 }
