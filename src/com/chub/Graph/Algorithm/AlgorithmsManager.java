@@ -3,7 +3,8 @@ package com.chub.Graph.Algorithm;
 import com.chub.Graph.Graph;
 
 public class AlgorithmsManager{
-	Graph graph;
+	private Graph graph;
+	
 	
 	public AlgorithmsManager (Graph graph){
 		this.graph = graph;
@@ -19,5 +20,11 @@ public class AlgorithmsManager{
 		BreadthSearch bs = new BreadthSearch (graph);
 		bs.start (vertexStart);
 		bs.selectOuputMethod ();
+	}
+	
+	public void searchDegreeAllVert (){
+		SearchDegreeAllVertices sdav = new SearchDegreeAllVertices (graph);
+		sdav.perform ();
+		sdav.selectOuputMethod ();
 	}
 }

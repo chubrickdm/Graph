@@ -7,6 +7,9 @@ import java.util.Scanner;
 
 public class Main{
 	public static void main (String[] args){
+		
+		
+		
 		String comand = "0";
 		Scanner in = new Scanner (System.in);
 		

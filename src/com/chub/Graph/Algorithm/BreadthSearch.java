@@ -14,7 +14,7 @@ class BreadthSearch extends Algorithm{
 	private ArrayList <ArrayList <Pair>> graphList = new ArrayList <> ();
 	
 	
-	private void breadthSearch (int vertex){
+	private void nextVertex (int vertex){
 		if (!list.isEmpty ()){
 			list.remove (0);
 			int nextV;
@@ -23,7 +23,7 @@ class BreadthSearch extends Algorithm{
 				if (markVert[nextV] != markValue){
 					list.add (i);
 					markVert[nextV] = markValue;
-					breadthSearch (nextV);
+					nextVertex (nextV);
 				}
 			}
 		}
@@ -59,7 +59,7 @@ class BreadthSearch extends Algorithm{
 	void start (int vertexStart){
 		list.add (vertexStart);
 		markVert[vertexStart] = markValue;
-		breadthSearch (vertexStart);
+		nextVertex (vertexStart);
 	}
 	
 	int[] getConectedComponents (){
