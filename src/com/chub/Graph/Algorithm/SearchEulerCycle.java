@@ -32,6 +32,7 @@ public class SearchEulerCycle extends Algorithm{
 				}
 			}
 		}
+		
 		if (startV != 0 && endV == 0){
 			return false;
 		}
@@ -43,15 +44,13 @@ public class SearchEulerCycle extends Algorithm{
 		bs.setMarkValue (1);
 		bs.start (1);
 		int[] arrayI = bs.getConectedComponents ();
-		int tmpNumVert = 0;
+		arrayI[0] = 1;
 		for (int tmpI : arrayI){
-			if (tmpI == 1){
-				tmpNumVert++;
+			if (tmpI != 1){
+				return false;
 			}
 		}
-		if (tmpNumVert != numVertex){
-			return false;
-		}
+		
 		return true;
 	}
 	

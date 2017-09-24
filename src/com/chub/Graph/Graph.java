@@ -9,8 +9,6 @@ import java.util.Scanner;
 
 public class Graph{
 	private int numVertex = 0;
-	private int numComponents = 0;
-	private int [] arrayConectComp;
 	private Storage storage = Storage.unknown;
 	private Orientation orientation = Orientation.unknown;
 	private StorageMatrix matrix = new StorageMatrix ();
