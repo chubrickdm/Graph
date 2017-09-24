@@ -51,9 +51,6 @@ class BreadthSearch extends Algorithm{
 		graphList = g.getList ();
 		int numVertex = g.getNumVertex ();
 		markVert = new int[numVertex + 1];
-		for (int i = 0; i < numVertex + 1; i++){
-			markVert[i] = 0;
-		}
 	}
 	
 	void start (int vertexStart){

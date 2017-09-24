@@ -52,7 +52,8 @@ class SearchAllConectedComponents extends Algorithm{
 			return arrayConectComp;
 		}
 		else{
-			System.out.println ("Graph should be unOriented.");
+			error = true;
+			System.out.println ("ERROR! Graph should be unOriented.");
 		}
 		return new int [0];
 	}

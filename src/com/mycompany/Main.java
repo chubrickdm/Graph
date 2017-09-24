@@ -13,36 +13,36 @@ public class Main{
 		
 		Graph g = new Graph ();
 		AlgorithmsManager algorithms = new AlgorithmsManager (g);
-		while (!comand.equals ("7")){
+		while (!comand.equals ("6")){
 			System.out.println ("\n------------Menu------------");
-			System.out.println ("1-new graph\n2-input graph\n3-output graph\n4-search all conected components");
-			System.out.println ("5-draw graph in image\n6-search Euler cycle\n7-exit");
+			System.out.println ("1-input graph\n2-output graph\n3-search all conected components");
+			System.out.println ("4-draw graph in image\n5-search Euler cycle\n6-exit");
 			System.out.print ("Select an action: ");
 			comand = in.next ();
+			
 			if (comand.equals ("1")){
 				g = new Graph ();
-			}
-			else if (comand.equals ("2")){
+				algorithms = new AlgorithmsManager (g);
 				g.input ();
 			}
-			else if (comand.equals ("3")){
+			else if (comand.equals ("2")){
 				g.output ();
 			}
-			else if (comand.equals ("4")){
+			else if (comand.equals ("3")){
 				algorithms.searchAllConectComponents ();
 			}
-			else if (comand.equals ("5")){
+			else if (comand.equals ("4")){
 				DrawGraph dg = new DrawGraph (g);
 				dg.saveInImage ();
 			}
-			else if (comand.equals ("6")){
-				//algorithms.s
+			else if (comand.equals ("5")){
+				algorithms.searchEulerCycle ();
 			}
-			else if (comand.equals ("7")){
+			else if (comand.equals ("6")){
 				System.out.println ("\nGood bye.");
 			}
 			else{
-				System.out.println ("Enter '1' - '7'.");
+				System.out.println ("Enter '1' - '6'.");
 			}
 		}
 	}

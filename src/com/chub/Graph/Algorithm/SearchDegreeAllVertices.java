@@ -8,6 +8,7 @@ import java.io.IOException;
 class SearchDegreeAllVertices extends Algorithm{
 	private int[] degreeVert;
 	private int numVertex;
+	private int sumDegree = 0;
 	
 	@Override
 	protected void output (BufferedWriter bw){
@@ -37,5 +38,12 @@ class SearchDegreeAllVertices extends Algorithm{
 		}
 		
 		return degreeVert;
+	}
+	
+	int sumDegreeAllVertices (){
+		for (int tmpI : degreeVert){
+			sumDegree += tmpI;
+		}
+		return sumDegree;
 	}
 }

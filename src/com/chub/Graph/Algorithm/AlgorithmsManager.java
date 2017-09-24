@@ -27,4 +27,10 @@ public class AlgorithmsManager{
 		sdav.perform ();
 		sdav.selectOuputMethod ();
 	}
+	
+	public void searchEulerCycle (){
+		SearchEulerCycle sec = new SearchEulerCycle (graph);
+		sec.perform ();
+		sec.selectOuputMethod ();
+	}
 }

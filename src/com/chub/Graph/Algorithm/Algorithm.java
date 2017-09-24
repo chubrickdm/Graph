@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 abstract class Algorithm{
 	protected Graph graph;
+	protected boolean error = false;
 	
 	
 	private String enterFileName (){
@@ -27,31 +28,33 @@ abstract class Algorithm{
 	
 	
 	void selectOuputMethod (){
-		String outputMethod;
-		boolean userSelect = false;
-		
-		while (userSelect != true){
-			Scanner scanner = new Scanner (System.in);
-			System.out.println ("Select the output method.");
-			System.out.print ("Enter 'c' if you want output from console or 'f' from file: ");
-			outputMethod = scanner.next ();
+		if (!error){
+			String outputMethod;
+			boolean userSelect = false;
 			
-			if (outputMethod.equals ("f")){
+			while (userSelect != true){
+				Scanner scanner = new Scanner (System.in);
+				System.out.println ("Select the output method.");
+				System.out.print ("Enter 'c' if you want output from console or 'f' from file: ");
+				outputMethod = scanner.next ();
 				
-				try{
-					output (new BufferedWriter (new FileWriter (enterFileName ())));
+				if (outputMethod.equals ("f")){
+					
+					try{
+						output (new BufferedWriter (new FileWriter (enterFileName ())));
+					}
+					catch (IOException e){
+						System.out.println ("ERROR! File is locked.");
+					}
+					userSelect = true;
 				}
-				catch (IOException e){
-					System.out.println ("ERROR! File is locked.");
+				else if (outputMethod.equals ("c")){
+					output (new BufferedWriter (new OutputStreamWriter (System.out)));
+					userSelect = true;
 				}
-				userSelect = true;
-			}
-			else if (outputMethod.equals ("c")){
-				output (new BufferedWriter (new OutputStreamWriter (System.out)));
-				userSelect = true;
-			}
-			else{
-				System.out.println ("ERROR! Enter 'c' or 'f'.");
+				else{
+					System.out.println ("ERROR! Enter 'c' or 'f'.");
+				}
 			}
 		}
 	}
